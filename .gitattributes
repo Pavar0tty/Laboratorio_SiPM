@@ -1,0 +1,2 @@
+# serve a non committare l'output delle celle, in modo da ridurre i conflitti
+*.ipynb filter=nbstripout
