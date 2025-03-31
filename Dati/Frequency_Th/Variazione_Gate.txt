@@ -1,0 +1,2 @@
+Thr.[mV] - 0 (yellow)	 - 0 (yellow)	Thr.[mV] - 1 (green)	 - 1 (green)	Thr.[mV] - 2 (red)	 - 2 (red)	Thr.[mV] - 3 (light blue)	 - 3 (light blue)	Thr.[mV] - 4 (light yellow)	 - 4 (light yellow)	Thr.[mV] - 5 (pink)	 - 5 (pink)	Thr.[mV] - 6 (orange)	 - 6 (orange)	Thr.[mV] - 7 (violet)	 - 7 (violet)
+-6	0,96448	-6	0,99284	-6	0,9816	-6	0,985653	-6	0,98664	-6	0,987952	-6	100,624		
