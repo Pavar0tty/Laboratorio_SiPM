@@ -2,6 +2,10 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
+import os
+while not os.getcwd().endswith('Laboratorio_SiPM'):
+    os.chdir('..')
+
 import sys
-sys.path.insert(1, '../')
+sys.path.append('Config')
 from lablib import *
