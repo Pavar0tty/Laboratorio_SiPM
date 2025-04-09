@@ -10,20 +10,25 @@ def graph(X, Y, A, B, Z, S, K):
 
     plt.plot(X, B, label = "V_b = 53V")
     ax.scatter(X, B)
+#    plt.errorbar(X, B, 0.008069216556564512)
 
     plt.plot(X, Y, label = "V_b = 54V")
     ax.scatter(X, Y)
-
+ #   plt.errorbar(X, Y, 0.008069216556564512)
 
     plt.plot(X, K, label = "V_b = 54.5V")
     ax.scatter(X, K)
+  #  plt.errorbar(X, K, 0.008069216556564512)
 
     plt.plot(X, Z, label = "V_b = 55V")
     ax.scatter(X, Z)
+   # plt.errorbar(X, Z, 0.008069216556564512)
 
     plt.plot(X, S, label = "V_b = 55.5V")
     ax.scatter(X, S)
+   # plt.errorbar(X, S, 0.008069216556564512)
 
+    plt.title('Staircase Plot')
     ax.set_yscale ("log")
     ax.set_xlabel("Threshold[mV]")
     ax.set_ylabel("Log(Frequency[kHz])")
