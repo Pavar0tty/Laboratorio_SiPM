@@ -1,0 +1,265 @@
+
+
+*** Start of Header ***
+
+Signature:  	 HERA Writer V 1.1
+Separator TAB
+Decimal Separator:  "." 
+Date:  	 14/04/2025 
+Time:  	 12:03:58 
+Username:  	  
+Description:  	  
+Dataset Channels: 	 2 
+Dataset Samples:  	 200 
+
+Data taking Conditions:  	  
+ 
+Dataset metadata
+Date / Time creation: 	 20250414-T120358 
+User: 	 Guest 
+Activity code: 	 20 
+Sub-Activity code: 	 1 
+Sub-Activity: 	 A1.1 SiPM Characterization 
+
+PSAU settings:
+ Channel in use: 	 1 
+
+Channels setting follow: 	  
+Ch.:  	 0 
+SiPM Serial: 	 10564 
+Bias Voltage [V]: 	 54,00 
+Gain [dB]: 	 25,00 
+Threshold [mV]: 	 -100,00 
+Channel Temperature [°C]: 	 21,40 
+T Compensation:  	 Off 
+dV/dT 	 20,00 
+Ch.:  	 1 
+SiPM Serial: 	 10567 
+Bias Voltage [V]: 	 54,50 
+Gain [dB]: 	 20,00 
+Threshold [mV]: 	 -20,00 
+Channel Temperature [°C]: 	 21,40 
+T Compensation:  	 On 
+dV/dT 	 0,00 
+
+DGTZ settings:
+ Model: 	 DT5720A 
+Model #: 	 9 
+Serial #: 	 1164 
+Channel 0 Status: 	 Off 
+Channel 1 Status: 	 On 
+DC Offset 0: 	 -38 
+DC Offset 1: 	 0 
+Trigger Mode: 	 FALSE 
+Trigger Rise Time: 	 8 
+Trigger Mean: 	 8 
+Trigger 0 Thresh.: 	 30 
+Trigger 1 Thresh.: 	 50 
+Gate Mode: 	 FALSE 
+Gate Width|Pre|Hold: 	 1504 | 160 | 6664 
+Baseline Mean|Thresh.|NoFlatTime: 	 16 | 8 | 6008 
+Coincidence Status: 	 FALSE 
+Coincidence on GPO|Time: 	 0 | 0 
+*** End of Header ***
+ 
+ADC Channel	Counts	 
+-4975 	0 	
+-4925 	0 	
+-4875 	0 	
+-4825 	0 	
+-4775 	0 	
+-4725 	0 	
+-4675 	0 	
+-4625 	0 	
+-4575 	0 	
+-4525 	0 	
+-4475 	0 	
+-4425 	0 	
+-4375 	0 	
+-4325 	0 	
+-4275 	0 	
+-4225 	0 	
+-4175 	0 	
+-4125 	0 	
+-4075 	0 	
+-4025 	0 	
+-3975 	1 	
+-3925 	0 	
+-3875 	0 	
+-3825 	0 	
+-3775 	0 	
+-3725 	0 	
+-3675 	0 	
+-3625 	0 	
+-3575 	0 	
+-3525 	0 	
+-3475 	0 	
+-3425 	0 	
+-3375 	0 	
+-3325 	1 	
+-3275 	0 	
+-3225 	0 	
+-3175 	1 	
+-3125 	0 	
+-3075 	0 	
+-3025 	0 	
+-2975 	0 	
+-2925 	0 	
+-2875 	0 	
+-2825 	0 	
+-2775 	0 	
+-2725 	0 	
+-2675 	0 	
+-2625 	0 	
+-2575 	0 	
+-2525 	0 	
+-2475 	0 	
+-2425 	0 	
+-2375 	0 	
+-2325 	0 	
+-2275 	0 	
+-2225 	0 	
+-2175 	0 	
+-2125 	0 	
+-2075 	0 	
+-2025 	0 	
+-1975 	0 	
+-1925 	0 	
+-1875 	0 	
+-1825 	1 	
+-1775 	0 	
+-1725 	1 	
+-1675 	1 	
+-1625 	0 	
+-1575 	0 	
+-1525 	0 	
+-1475 	0 	
+-1425 	0 	
+-1375 	0 	
+-1325 	0 	
+-1275 	0 	
+-1225 	0 	
+-1175 	0 	
+-1125 	0 	
+-1075 	1 	
+-1025 	0 	
+-975 	0 	
+-925 	0 	
+-875 	0 	
+-825 	2 	
+-775 	1 	
+-725 	3 	
+-675 	5 	
+-625 	6 	
+-575 	9 	
+-525 	12 	
+-475 	11 	
+-425 	16 	
+-375 	29 	
+-325 	28 	
+-275 	30 	
+-225 	49 	
+-175 	39 	
+-125 	47 	
+-75 	46 	
+-25 	46 	
+25 	65 	
+75 	64 	
+125 	51 	
+175 	50 	
+225 	50 	
+275 	63 	
+325 	50 	
+375 	45 	
+425 	44 	
+475 	50 	
+525 	36 	
+575 	42 	
+625 	48 	
+675 	29 	
+725 	37 	
+775 	22 	
+825 	33 	
+875 	17 	
+925 	35 	
+975 	22 	
+1025 	16 	
+1075 	23 	
+1125 	20 	
+1175 	15 	
+1225 	15 	
+1275 	19 	
+1325 	14 	
+1375 	4 	
+1425 	7 	
+1475 	9 	
+1525 	8 	
+1575 	6 	
+1625 	15 	
+1675 	9 	
+1725 	4 	
+1775 	8 	
+1825 	3 	
+1875 	7 	
+1925 	9 	
+1975 	8 	
+2025 	5 	
+2075 	6 	
+2125 	3 	
+2175 	5 	
+2225 	5 	
+2275 	1 	
+2325 	7 	
+2375 	1 	
+2425 	2 	
+2475 	3 	
+2525 	2 	
+2575 	0 	
+2625 	2 	
+2675 	2 	
+2725 	3 	
+2775 	3 	
+2825 	0 	
+2875 	3 	
+2925 	2 	
+2975 	0 	
+3025 	5 	
+3075 	3 	
+3125 	1 	
+3175 	0 	
+3225 	3 	
+3275 	4 	
+3325 	0 	
+3375 	3 	
+3425 	0 	
+3475 	2 	
+3525 	0 	
+3575 	1 	
+3625 	2 	
+3675 	3 	
+3725 	3 	
+3775 	1 	
+3825 	3 	
+3875 	3 	
+3925 	2 	
+3975 	0 	
+4025 	1 	
+4075 	0 	
+4125 	0 	
+4175 	0 	
+4225 	2 	
+4275 	0 	
+4325 	1 	
+4375 	0 	
+4425 	1 	
+4475 	0 	
+4525 	0 	
+4575 	0 	
+4625 	1 	
+4675 	1 	
+4725 	2 	
+4775 	1 	
+4825 	0 	
+4875 	0 	
+4925 	2 	
+4975 	2 	
