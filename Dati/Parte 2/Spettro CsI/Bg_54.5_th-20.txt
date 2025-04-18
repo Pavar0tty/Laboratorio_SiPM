@@ -30,7 +30,7 @@ SiPM Serial: 	 10564
 Bias Voltage [V]: 	 54,00 
 Gain [dB]: 	 25,00 
 Threshold [mV]: 	 -100,00 
-Channel Temperature [°C]: 	 21,40 
+Channel Temperature [ï¿½C]: 	 21,40 
 T Compensation:  	 Off 
 dV/dT 	 20,00 
 Ch.:  	 1 
@@ -38,7 +38,7 @@ SiPM Serial: 	 10567
 Bias Voltage [V]: 	 54,50 
 Gain [dB]: 	 20,00 
 Threshold [mV]: 	 -20,00 
-Channel Temperature [°C]: 	 21,40 
+Channel Temperature [ï¿½C]: 	 21,40 
 T Compensation:  	 On 
 dV/dT 	 0,00 
 
@@ -62,8 +62,8 @@ Coincidence Status: 	 FALSE
 Coincidence on GPO|Time: 	 0 | 0 
 *** End of Header ***
  
-ADC Channel	Counts	 
--4975 	1 	
+ADC_Channel Counts	 
+-4975 	1
 -4925 	0 	
 -4875 	1 	
 -4825 	0 	
@@ -1262,4 +1262,4 @@ ADC Channel	Counts
 54825 	0 	
 54875 	0 	
 54925 	0 	
-54975 	0 	
+54975 	0
