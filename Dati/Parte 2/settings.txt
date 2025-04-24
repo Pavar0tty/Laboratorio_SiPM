@@ -1,13 +1,13 @@
 Settings: (LySO)
 -Vbias = 54.5
--Gain = 2
+-Gain = 20
 -Thr = -20
 -Gate = 600
 -Pregate = 160
 -DC Offset = 16
 Binning:
--Number = 600
--Origin = -15000
+-Number = 350
+-Origin = -1000
 -Size = 100
 Tempo acquisizione Bkgd : 10 min
 Tempo acquisizione segnale : 10 min
@@ -31,12 +31,12 @@ Settings: (BGO)
 -Gain = 20
 -Thr = -20
 -Gate = 1500
--Pregate = 160
+-Pregate = 150
 -DC Offset = 0
 Binning:
 -Number = 200
 -Origin = -1000
--Size = 50
+-Size = 100
 Tempo acquisizione Bkgd : 10 min
 Tempo acquisizione segnale : 10 min
 
