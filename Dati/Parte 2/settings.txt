@@ -16,7 +16,7 @@ Settings: (CSI)
 -Vbias = 54.5
 -Gain = 20
 -Thr = -20
--Gate = 5000
+-Gate = 7000
 -Pregate = 200
 -DC Offset = 0
 Binning:
