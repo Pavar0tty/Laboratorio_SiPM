@@ -80,3 +80,41 @@ def TrasportoErroriX2Y(x:list, dx:float, dy:float, modello:'function') -> list:
 
     return sy
 
+def crop_df(df: pd.DataFrame, N: int, thr = 0) -> pd.DataFrame:
+    """
+    Remove groups of consecutive numbers under the threshold from the DataFrame.
+    """
+    is_zero = df.iloc[:,1] <= thr
+    group_id = (is_zero != is_zero.shift()).cumsum()
+    removal_mask = pd.Series(False, index=df.index)
+    for grp, group_indices in df.groupby(group_id).groups.items():
+        if is_zero.loc[group_indices[0]] and len(group_indices) > N:
+            removal_mask.loc[group_indices] = True
+    return df[~removal_mask].copy()
+
+def cut_df(df: pd.DataFrame, sec: tuple) -> pd.DataFrame:
+    """
+    Rimuove i dati al di fuori del range definito da sec.
+    """
+    return df[(df.iloc[:,0] >= sec[0]) & (df.iloc[:,0] <= sec[1])].copy()
+
+def assign_errors(df: pd.DataFrame, lim = 30) -> np.ndarray:
+    """
+    Assegna un errore a ciascun valore in base al valore stesso.
+    L'errore è considerato gaussiano se ci sono abbastanza eventi.
+    Se il numero di eventi è minore di lim, va riconsiderato.
+    """
+    ys = list(df.iloc[:,1])
+    tot = np.sum(ys)
+    ers = np.zeros(len(df))
+
+    i = 0
+    for y in ys:
+        if y > lim: # type: ignore
+            ers[i] = np.sqrt(y) # type: ignore
+        else:
+            ers[i] = np.sqrt(lim) # FIXME
+            #ers[i] = np.sqrt(y * y/tot * (1 - y/tot))
+        i += 1
+
+    return ers
