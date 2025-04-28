@@ -1,5 +1,5 @@
 Settings: (LySO)
--Vbias = 54.5
+-Vbias = 55.5
 -Gain = 20
 -Thr = -20
 -Gate = 600
@@ -13,7 +13,7 @@ Tempo acquisizione Bkgd : 10 min
 Tempo acquisizione segnale : 10 min
 
 Settings: (CSI)
--Vbias = 54.5
+-Vbias = 55.5
 -Gain = 20
 -Thr = -20
 -Gate = 7000
@@ -27,7 +27,7 @@ Tempo acquisizione Bkgd : 10 min
 Tempo acquisizione segnale : 10 min
 
 Settings: (BGO)
--Vbias = 54.5
+-Vbias = 55.5
 -Gain = 20
 -Thr = -20
 -Gate = 1500
