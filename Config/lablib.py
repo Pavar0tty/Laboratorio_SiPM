@@ -1,6 +1,8 @@
 from iminuit import Minuit
 from iminuit.cost import LeastSquares, ExtendedBinnedNLL
 from scipy.stats import chi2
+import pandas as pd
+import numpy as np
 
 def LS_fit(data_x:list, data_y:list, y_err:list, model:'function', disp = 1, **kwrds):
     """
@@ -118,3 +120,22 @@ def assign_errors(df: pd.DataFrame, lim = 30) -> np.ndarray:
         i += 1
 
     return ers
+
+def read_corretto(path: str, skiprs: int = 65, titles: list = ['ADC', 'Counts']):
+    return pd.read_csv(path, delim_whitespace= True, skiprows = skiprs, header=None, encoding= 'ISO-8859-1', names= titles)
+
+#definisco le varie funzioni
+def gauss(x, mu, sigma, a):
+    return a * np.exp(-0.5 * ((x - mu) / sigma) ** 2)
+
+def gauss_cost(x, mu, sigma, a, cost):
+    return gauss(x, mu, sigma, a) + cost
+
+def gauss_pol2(x, mu, sigma, a, b, c, cost):
+    return gauss(x, mu, sigma, a) + b*x + c * x**2 + cost
+
+def gauss_exp(x, mu, sigma, a, b):
+    return gauss(x, mu, sigma, a) + b * np.exp(-x) 
+
+def gauss_pol3 (x, mu, sigma, a, b, c, cost, d):
+    return gauss_pol2(x, mu, sigma, a, b, c, cost) + d* x**3
