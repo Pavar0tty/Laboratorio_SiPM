@@ -12,7 +12,7 @@ def LS_fit(data_x:list, data_y:list, y_err:list, model:'function', disp = 1, **k
     
     Usare x, y, *z = LS_fit(...), dove *z racchiude tutte gli altri valori
     """
-    cost_function = LeastSquares(data_x, data_y, y_err, model)
+    cost_function = LeastSquares(data_x, data_y, y_err, model) # type: ignore
 
     my_minuit = Minuit(cost_function, **kwrds)
     my_minuit.migrad()
@@ -38,7 +38,7 @@ def Binned_fit(bin_content:list, bin_edges:list, modello:'function', disp = 1, *
 
     Ritorna in ordine: parametri, valori, errori, p-value, gradi di lib., chi-quadro, matrice di covarianza
     """
-    cost_function = ExtendedBinnedNLL(bin_content, bin_edges, modello)
+    cost_function = ExtendedBinnedNLL(bin_content, bin_edges, modello) # type: ignore
 
     my_minuit = Minuit(cost_function, **kwrds)
     my_minuit.migrad()
@@ -73,9 +73,9 @@ def TrasportoErroriX2Y(x:list, dx:float, dy:float, modello:'function') -> list:
     """
     sy = []
 
-    for i, j, k in zip(x, dx, dy):
-        yl = modello(i - j)
-        yr = modello(i + j)
+    for i, j, k in zip(x, dx, dy): # type: ignore
+        yl = modello(i - j) # type: ignore
+        yr = modello(i + j) # type: ignore
         delta_y = (yr - yl)/2
 
         sy.append((delta_y**2 + k**2) ** .5)
