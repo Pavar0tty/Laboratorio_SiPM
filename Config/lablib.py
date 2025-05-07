@@ -109,7 +109,7 @@ def assign_errors(df: pd.DataFrame, lim = 30) -> np.ndarray:
     ys = list(df.iloc[:,1])
     tot = np.sum(ys)
     ers = np.zeros(len(df))
-
+    
     i = 0
     for y in ys:
         if y > lim: # type: ignore
@@ -134,8 +134,8 @@ def gauss_cost(x, mu, sigma, a, cost):
 def gauss_pol2(x, mu, sigma, a, b, c, cost):
     return gauss(x, mu, sigma, a) + b*x + c * x**2 + cost
 
-def gauss_exp(x, mu, sigma, a, b):
-    return gauss(x, mu, sigma, a) + b * np.exp(-x) 
+def gauss_exp(x, mu, sigma, a, b, c):
+    return gauss(x, mu, sigma, a) + b * np.exp(-c*x) 
 
 def gauss_pol3 (x, mu, sigma, a, b, c, cost, d):
     return gauss_pol2(x, mu, sigma, a, b, c, cost) + d* x**3
