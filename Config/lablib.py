@@ -153,7 +153,7 @@ def assign_errors(df: pd.DataFrame, lim = 30) -> np.ndarray:
 
 
 def read_corretto(path: str, skiprs: int = 65, titles: list = ['ADC', 'Counts']):
-    return pd.read_csv(path, delim_whitespace= True, skiprows = skiprs, header=None, encoding= 'ISO-8859-1', names= titles)
+    return pd.read_csv(path, sep='\s+', skiprows = skiprs, header=None, encoding= 'ISO-8859-1', names= titles) # type: ignore
 
 #alcune gaussiane utili
 def gauss(x, mu, sigma, S):
