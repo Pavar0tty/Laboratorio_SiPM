@@ -139,13 +139,14 @@ def assign_errors(df: pd.DataFrame, lim = 30) -> np.ndarray:
     ys = list(df.iloc[:,1])
     tot = np.sum(ys)
     ers = np.zeros(len(df))
+    minerr = np.sqrt(lim)
     
     i = 0
     for y in ys:
         if y > lim: # type: ignore
             ers[i] = np.sqrt(y) # type: ignore
         else:
-            ers[i] = np.sqrt(lim) # FIXME
+            ers[i] = minerr # FIXME
             #ers[i] = np.sqrt(y * y/tot * (1 - y/tot))
         i += 1
 
