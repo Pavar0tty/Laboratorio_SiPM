@@ -31,6 +31,36 @@ def LS_fit(data_x:list, data_y:list, y_err:list, model:'function', disp = 1, **k
 
     return params, values, uncert, pval, dof, chi_quadro, cov
 
+def LS_fit_lims(data_x:list, data_y:list, y_err:list, model:'function', limits:list, disp = 1, **kwrds):
+    """
+    Fit dei dati con metodo dei minimi quadrati.
+
+    A differenza del metodo LS_fit, permette di imporre dei limiti sui parametri.
+    I limiti devono essere passati come una lista di liste, dove la prima lista contiene i nomi dei parametri e la seconda i limiti.
+    """
+    cost_function = LeastSquares(data_x, data_y, y_err, model) # type: ignore
+
+    my_minuit = Minuit(cost_function, **kwrds)
+
+    for i in range(len(limits)):
+        my_minuit.limits[[0][i]] = limits[1][i]
+
+    my_minuit.migrad()
+    my_minuit.hesse()
+
+    params = my_minuit.parameters
+    values = my_minuit.values
+    uncert = my_minuit.errors
+    chi_quadro = my_minuit.fval
+    dof = my_minuit.ndof
+    cov = my_minuit.covariance
+
+    pval = 1. - chi2.cdf(chi_quadro, df = dof)
+
+    if disp : display(my_minuit) # type: ignore
+
+    return params, values, uncert, pval, dof, chi_quadro, cov
+
 
 def Binned_fit(bin_content:list, bin_edges:list, modello:'function', disp = 1, **kwrds):
     """
@@ -109,33 +139,38 @@ def assign_errors(df: pd.DataFrame, lim = 30) -> np.ndarray:
     ys = list(df.iloc[:,1])
     tot = np.sum(ys)
     ers = np.zeros(len(df))
+    minerr = np.sqrt(lim)
     
     i = 0
     for y in ys:
         if y > lim: # type: ignore
             ers[i] = np.sqrt(y) # type: ignore
         else:
-            ers[i] = np.sqrt(lim) # FIXME
+            ers[i] = minerr # FIXME
             #ers[i] = np.sqrt(y * y/tot * (1 - y/tot))
         i += 1
 
     return ers
 
+
 def read_corretto(path: str, skiprs: int = 65, titles: list = ['ADC', 'Counts']):
-    return pd.read_csv(path, delim_whitespace= True, skiprows = skiprs, header=None, encoding= 'ISO-8859-1', names= titles)
+    return pd.read_csv(path, sep='\s+', skiprows = skiprs, header=None, encoding= 'ISO-8859-1', names= titles) # type: ignore
 
-#definisco le varie funzioni
-def gauss(x, mu, sigma, a):
-    return a * np.exp(-0.5 * ((x - mu) / sigma) ** 2)
+#alcune gaussiane utili
+def gauss(x, mu, sigma, S):
+    return S * np.exp(-0.5 * ((x - mu) / sigma) ** 2)
 
-def gauss_cost(x, mu, sigma, a, cost):
-    return gauss(x, mu, sigma, a) + cost
+def gauss_cost(x, mu, sigma, S, a):
+    return gauss(x, mu, sigma, S) + a
 
-def gauss_pol2(x, mu, sigma, a, b, c, cost):
-    return gauss(x, mu, sigma, a) + b*x + c * x**2 + cost
+def gauss_pol1(x, mu, sigma, S, a, b,):
+    return gauss(x, mu, sigma, S) + b*x + a
 
-def gauss_exp(x, mu, sigma, a, b, c):
-    return gauss(x, mu, sigma, a) + b * np.exp(-c*x) 
+def gauss_pol2(x, mu, sigma, S, a, b, c):
+    return gauss(x, mu, sigma, S) + a + b*x + c*x**2
 
-def gauss_pol3 (x, mu, sigma, a, b, c, cost, d):
-    return gauss_pol2(x, mu, sigma, a, b, c, cost) + d* x**3
+def gauss_pol3 (x, mu, sigma, S, a, b, c, d):
+    return gauss(x, mu, sigma, S) + a + b*x + c*x**2 + d*x**3
+
+def gauss_exp(x, mu, sigma, S, a, lam):
+    return gauss(x, mu, sigma, S) + a * np.exp(-lam*x) 
