@@ -43,7 +43,7 @@ def LS_fit_lims(data_x:list, data_y:list, y_err:list, model:'function', limits:l
     my_minuit = Minuit(cost_function, **kwrds)
 
     for i in range(len(limits)):
-        my_minuit.limits[[0][i]] = limits[1][i]
+        my_minuit.limits[[i][0]] = limits[i][1]
 
     my_minuit.migrad()
     my_minuit.hesse()
