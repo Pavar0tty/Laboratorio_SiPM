@@ -25,5 +25,6 @@ def main():
     Z = [0.369167,0.355867,0.355467,0.3673,0.3667,0.346633,0.352]
     graph(Z)
     print(np.std(Z))
-
+    print(np.mean(Z))
+    print('Errore relativo:', (np.std(Z)/np.mean(Z))*100, '%')
 main()
