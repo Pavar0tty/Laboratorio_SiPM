@@ -1,0 +1,265 @@
+
+
+*** Start of Header ***
+
+Signature:  	 HERA Writer V 1.1
+Separator TAB
+Decimal Separator:  "." 
+Date:  	 29/05/2025 
+Time:  	 10:18:31 
+Username:  	 Guest 
+Description:  	 Charge Histogram  
+Dataset Channels: 	 2 
+Dataset Samples:  	 200 
+
+Data taking Conditions:  	 L.E.D. Driver Setting:  
+ 
+Dataset metadata
+Date / Time creation: 	 20250529-T101831 
+User: 	 Guest 
+Activity code: 	 20 
+Sub-Activity code: 	 1 
+Sub-Activity: 	 A1.1 SiPM Characterization 
+
+PSAU settings:
+ Channel in use: 	 0 
+
+Channels setting follow: 	  
+Ch.:  	 0 
+SiPM Serial: 	 10564 
+Bias Voltage [V]: 	 55,50 
+Gain [dB]: 	 20,00 
+Threshold [mV]: 	 -20,00 
+Channel Temperature [°C]: 	 21,50 
+T Compensation:  	 On 
+dV/dT 	 20,00 
+Ch.:  	 1 
+SiPM Serial: 	 10567 
+Bias Voltage [V]: 	 55,50 
+Gain [dB]: 	 20,00 
+Threshold [mV]: 	 -20,00 
+Channel Temperature [°C]: 	 21,40 
+T Compensation:  	 Off 
+dV/dT 	 20,00 
+
+DGTZ settings:
+ Model: 	 DT5720A 
+Model #: 	 9 
+Serial #: 	 1164 
+Channel 0 Status: 	 Off 
+Channel 1 Status: 	 On 
+DC Offset 0: 	 -38 
+DC Offset 1: 	 -18 
+Trigger Mode: 	 FALSE 
+Trigger Rise Time: 	 80 
+Trigger Mean: 	 8 
+Trigger 0 Thresh.: 	 30 
+Trigger 1 Thresh.: 	 5 
+Gate Mode: 	 FALSE 
+Gate Width|Pre|Hold: 	 1504 | 152 | 5000 
+Baseline Mean|Thresh.|NoFlatTime: 	 16 | 8 | 5000 
+Coincidence Status: 	 FALSE 
+Coincidence on GPO|Time: 	 0 | 0 
+*** End of Header ***
+ 
+ADC Channel	Counts	 
+-950 	1 	
+-850 	4 	
+-750 	10 	
+-650 	8 	
+-550 	11 	
+-450 	18 	
+-350 	20 	
+-250 	28 	
+-150 	35 	
+-50 	47 	
+50 	61 	
+150 	92 	
+250 	97 	
+350 	154 	
+450 	184 	
+550 	188 	
+650 	229 	
+750 	204 	
+850 	166 	
+950 	113 	
+1050 	62 	
+1150 	84 	
+1250 	53 	
+1350 	50 	
+1450 	59 	
+1550 	41 	
+1650 	31 	
+1750 	32 	
+1850 	20 	
+1950 	16 	
+2050 	14 	
+2150 	17 	
+2250 	11 	
+2350 	13 	
+2450 	13 	
+2550 	6 	
+2650 	15 	
+2750 	8 	
+2850 	7 	
+2950 	5 	
+3050 	7 	
+3150 	6 	
+3250 	6 	
+3350 	8 	
+3450 	5 	
+3550 	5 	
+3650 	5 	
+3750 	3 	
+3850 	5 	
+3950 	6 	
+4050 	3 	
+4150 	2 	
+4250 	4 	
+4350 	3 	
+4450 	1 	
+4550 	3 	
+4650 	0 	
+4750 	1 	
+4850 	1 	
+4950 	4 	
+5050 	3 	
+5150 	2 	
+5250 	1 	
+5350 	2 	
+5450 	2 	
+5550 	0 	
+5650 	3 	
+5750 	1 	
+5850 	1 	
+5950 	0 	
+6050 	2 	
+6150 	0 	
+6250 	2 	
+6350 	2 	
+6450 	0 	
+6550 	0 	
+6650 	3 	
+6750 	1 	
+6850 	1 	
+6950 	2 	
+7050 	0 	
+7150 	1 	
+7250 	0 	
+7350 	0 	
+7450 	0 	
+7550 	1 	
+7650 	0 	
+7750 	1 	
+7850 	0 	
+7950 	1 	
+8050 	1 	
+8150 	0 	
+8250 	1 	
+8350 	2 	
+8450 	0 	
+8550 	2 	
+8650 	0 	
+8750 	0 	
+8850 	0 	
+8950 	1 	
+9050 	1 	
+9150 	0 	
+9250 	2 	
+9350 	1 	
+9450 	1 	
+9550 	0 	
+9650 	1 	
+9750 	0 	
+9850 	0 	
+9950 	0 	
+10050 	1 	
+10150 	0 	
+10250 	0 	
+10350 	0 	
+10450 	0 	
+10550 	1 	
+10650 	1 	
+10750 	0 	
+10850 	0 	
+10950 	0 	
+11050 	1 	
+11150 	1 	
+11250 	0 	
+11350 	0 	
+11450 	1 	
+11550 	0 	
+11650 	0 	
+11750 	0 	
+11850 	0 	
+11950 	0 	
+12050 	0 	
+12150 	0 	
+12250 	0 	
+12350 	0 	
+12450 	0 	
+12550 	0 	
+12650 	0 	
+12750 	0 	
+12850 	0 	
+12950 	0 	
+13050 	2 	
+13150 	0 	
+13250 	0 	
+13350 	0 	
+13450 	0 	
+13550 	0 	
+13650 	0 	
+13750 	0 	
+13850 	0 	
+13950 	0 	
+14050 	0 	
+14150 	0 	
+14250 	0 	
+14350 	0 	
+14450 	0 	
+14550 	0 	
+14650 	0 	
+14750 	0 	
+14850 	0 	
+14950 	0 	
+15050 	1 	
+15150 	0 	
+15250 	0 	
+15350 	0 	
+15450 	0 	
+15550 	0 	
+15650 	0 	
+15750 	0 	
+15850 	0 	
+15950 	0 	
+16050 	0 	
+16150 	0 	
+16250 	0 	
+16350 	0 	
+16450 	0 	
+16550 	0 	
+16650 	0 	
+16750 	0 	
+16850 	0 	
+16950 	0 	
+17050 	0 	
+17150 	0 	
+17250 	1 	
+17350 	0 	
+17450 	0 	
+17550 	0 	
+17650 	0 	
+17750 	0 	
+17850 	1 	
+17950 	0 	
+18050 	0 	
+18150 	0 	
+18250 	0 	
+18350 	0 	
+18450 	0 	
+18550 	0 	
+18650 	0 	
+18750 	0 	
+18850 	0 	
+18950 	0 	
