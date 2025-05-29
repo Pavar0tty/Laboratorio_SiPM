@@ -174,3 +174,9 @@ def gauss_pol3 (x, mu, sigma, S, a, b, c, d):
 
 def gauss_exp(x, mu, sigma, S, a, lam):
     return gauss(x, mu, sigma, S) + a * np.exp(-lam*x) 
+
+def conv_ADC_Energy(C):
+    """
+    Prende in entrata il numero di ADC chennels e restituisce l'energia in eV.
+    """
+    return (2/50)*(1/2**12)*(4e-9)*1/25*C/1.602176634e-19*3.6
