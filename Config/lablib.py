@@ -179,4 +179,5 @@ def conv_ADC_Energy(C):
     """
     Prende in entrata il numero di ADC chennels e restituisce l'energia in eV.
     """
-    return (2/50)*(1/2**12)*(4e-9)*1/25*C/1.602176634e-19*3.6
+    # return (2/50)*(1/2**12)*(4e-9)*1/25*C/1.602176634e-19*3.6 per motivi di efficienza ho calcolato il coefficiente
+    return 35108.489 * C
