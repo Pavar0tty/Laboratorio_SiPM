@@ -112,7 +112,7 @@ def TrasportoErroriX2Y(x:list, dx:float, dy:float, modello:'function') -> list:
 
     return sy
 
-def crop_df(df: pd.DataFrame, N: int, thr = 0) -> pd.DataFrame:
+def crop_df(df: pd.DataFrame, N: int = 10, thr = 0) -> pd.DataFrame:
     """
     Remove groups of consecutive numbers under the threshold from the DataFrame.
     """
