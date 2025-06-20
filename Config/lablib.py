@@ -130,7 +130,7 @@ def cut_df(df: pd.DataFrame, sec: tuple) -> pd.DataFrame:
     """
     return df[(df.iloc[:,0] >= sec[0]) & (df.iloc[:,0] <= sec[1])].copy()
 
-def assign_errors(df: pd.DataFrame, lim = 30) -> np.ndarray:
+def assign_errors(df: pd.DataFrame, lim = 30, alt = 0) -> np.ndarray:
     """
     Assegna un errore a ciascun valore in base al valore stesso.
     L'errore è considerato gaussiano se ci sono abbastanza eventi.
@@ -146,8 +146,8 @@ def assign_errors(df: pd.DataFrame, lim = 30) -> np.ndarray:
         if y > lim: # type: ignore
             ers[i] = np.sqrt(y) # type: ignore
         else:
-            ers[i] = minerr # FIXME
-            #ers[i] = np.sqrt(y * y/tot * (1 - y/tot))
+            if not alt: ers[i] = minerr 
+            else: ers[i] = np.sqrt(y * y/tot * (1 - y/tot))
         i += 1
 
     return ers
